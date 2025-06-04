@@ -1,0 +1,1511 @@
+{
+	"info": {
+		"_postman_id": "c2f45eaf-a7eb-41a4-8e00-44a3d06bc50a",
+		"name": "EnterpriseScheduler",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45592131",
+		"_collection_link": "https://brunomartin-3524528.postman.co/workspace/Bruno-Martin's-Workspace~fc4a558b-8d0f-4765-8c0a-670826083cab/collection/45592131-c2f45eaf-a7eb-41a4-8e00-44a3d06bc50a?action=share&source=collection_link&creator=45592131"
+	},
+	"item": [
+		{
+			"name": "v1",
+			"item": [
+				{
+					"name": "EnterpriseScheduler",
+					"item": [
+						{
+							"name": "Meetings",
+							"item": [
+								{
+									"name": "user",
+									"item": [
+										{
+											"name": "{userId}",
+											"item": [
+												{
+													"name": "/v1/EnterpriseScheduler/Meetings/user/:userId",
+													"request": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/v1/EnterpriseScheduler/Meetings/user/:userId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"v1",
+																"EnterpriseScheduler",
+																"Meetings",
+																"user",
+																":userId"
+															],
+															"variable": [
+																{
+																	"key": "userId",
+																	"value": "20bf5ca6-ecd3-413d-acda-a032b3b0990b",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "200 Ok",
+															"originalRequest": {
+																"method": "GET",
+																"header": [],
+																"url": {
+																	"raw": "{{baseUrl}}/v1/EnterpriseScheduler/Meetings/user/:userId",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"v1",
+																		"EnterpriseScheduler",
+																		"Meetings",
+																		"user",
+																		":userId"
+																	],
+																	"variable": [
+																		{
+																			"key": "userId",
+																			"value": "deae984c-0c50-4c72-b6e2-759add218a1e",
+																			"description": "(Required) "
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json; charset=utf-8"
+																},
+																{
+																	"key": "Date",
+																	"value": "Wed, 04 Jun 2025 04:10:31 GMT"
+																},
+																{
+																	"key": "Server",
+																	"value": "Kestrel"
+																},
+																{
+																	"key": "Transfer-Encoding",
+																	"value": "chunked"
+																}
+															],
+															"cookie": [],
+															"body": "[\n    {\n        \"id\": \"815c4632-0e51-4960-aabf-945a69a8ef9e\",\n        \"title\": \"Third Meeting\",\n        \"startTime\": \"2025-06-03T00:00:00-06:00\",\n        \"endTime\": \"2025-06-03T01:00:00-06:00\",\n        \"participantIds\": [\n            \"deae984c-0c50-4c72-b6e2-759add218a1e\"\n        ]\n    },\n    {\n        \"id\": \"9333bcd3-a42f-4b37-af2a-1d410f9d525e\",\n        \"title\": \"First Meeting\",\n        \"startTime\": \"2025-06-02T18:37:49.784-06:00\",\n        \"endTime\": \"2025-06-02T18:37:49.784-06:00\",\n        \"participantIds\": [\n            \"deae984c-0c50-4c72-b6e2-759add218a1e\"\n        ]\n    },\n    {\n        \"id\": \"a93af392-6176-4970-b556-bbce660fcc05\",\n        \"title\": \"Second Meeting\",\n        \"startTime\": \"2025-06-02T18:37:49.784-06:00\",\n        \"endTime\": \"2025-06-02T18:37:49.784-06:00\",\n        \"participantIds\": [\n            \"deae984c-0c50-4c72-b6e2-759add218a1e\"\n        ]\n    }\n]"
+														},
+														{
+															"name": "404 User not found",
+															"originalRequest": {
+																"method": "GET",
+																"header": [],
+																"url": {
+																	"raw": "{{baseUrl}}/v1/EnterpriseScheduler/Meetings/user/:userId",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"v1",
+																		"EnterpriseScheduler",
+																		"Meetings",
+																		"user",
+																		":userId"
+																	],
+																	"variable": [
+																		{
+																			"key": "userId",
+																			"value": "357bb050-8f31-41fb-a346-8ff680fab083",
+																			"description": "(Required) "
+																		}
+																	]
+																}
+															},
+															"status": "Not Found",
+															"code": 404,
+															"_postman_previewlanguage": "plain",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "text/plain; charset=utf-8"
+																},
+																{
+																	"key": "Date",
+																	"value": "Wed, 04 Jun 2025 04:15:47 GMT"
+																},
+																{
+																	"key": "Server",
+																	"value": "Kestrel"
+																},
+																{
+																	"key": "Transfer-Encoding",
+																	"value": "chunked"
+																}
+															],
+															"cookie": [],
+															"body": "User with ID 357bb050-8f31-41fb-a346-8ff680fab083 not found"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "{id}",
+									"item": [
+										{
+											"name": "/v1/EnterpriseScheduler/Meetings/:id",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/v1/EnterpriseScheduler/Meetings/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"EnterpriseScheduler",
+														"Meetings",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "357bb050-8f31-41fb-a346-8ff680fab083",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "200 Ok",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/v1/EnterpriseScheduler/Meetings/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"v1",
+																"EnterpriseScheduler",
+																"Meetings",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id",
+																	"value": "357bb050-8f31-41fb-a346-8ff680fab083",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json; charset=utf-8"
+														},
+														{
+															"key": "Date",
+															"value": "Tue, 03 Jun 2025 03:35:37 GMT"
+														},
+														{
+															"key": "Server",
+															"value": "Kestrel"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														}
+													],
+													"cookie": [],
+													"body": "{\n    \"id\": \"73529432-2570-4fd5-8761-2a9d48f635d1\",\n    \"title\": \"First Meeting\",\n    \"startTime\": \"2025-06-03T00:37:49.784+00:00\",\n    \"endTime\": \"2025-06-03T00:37:49.784+00:00\",\n    \"participantIds\": [\n        \"357bb050-8f31-41fb-a346-8ff680fab083\"\n    ]\n}"
+												},
+												{
+													"name": "404 Not found",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/v1/EnterpriseScheduler/Meetings/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"v1",
+																"EnterpriseScheduler",
+																"Meetings",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id",
+																	"value": "357bb050-8f31-41fb-a346-8ff680fab083",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "plain",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain; charset=utf-8"
+														},
+														{
+															"key": "Date",
+															"value": "Tue, 03 Jun 2025 06:13:06 GMT"
+														},
+														{
+															"key": "Server",
+															"value": "Kestrel"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														}
+													],
+													"cookie": [],
+													"body": "Meeting with ID 357bb050-8f31-41fb-a346-8ff680fab083 not found"
+												}
+											]
+										},
+										{
+											"name": "/v1/EnterpriseScheduler/Meetings/:id",
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"title\": \"First Meeting\",\n    \"startTime\": \"2025-06-03T00:37:49.784+00:00\",\n    \"endTime\": \"2025-06-03T00:37:49.784+00:00\",\n    \"participantIds\": [\n        \"357bb050-8f31-41fb-a346-8ff680fab083\"\n    ]\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/v1/EnterpriseScheduler/Meetings/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"EnterpriseScheduler",
+														"Meetings",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "73529432-2570-4fd5-8761-2a9d48f635d1",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "200 Ok",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n    \"title\": \"First Meeting\",\n    \"startTime\": \"2025-06-03T00:37:49.784+00:00\",\n    \"endTime\": \"2025-06-03T00:37:49.784+00:00\",\n    \"participantIds\": [\n        \"357bb050-8f31-41fb-a346-8ff680fab083\"\n    ]\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/v1/EnterpriseScheduler/Meetings/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"v1",
+																"EnterpriseScheduler",
+																"Meetings",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id",
+																	"value": "73529432-2570-4fd5-8761-2a9d48f635d1",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json; charset=utf-8"
+														},
+														{
+															"key": "Date",
+															"value": "Tue, 03 Jun 2025 03:35:11 GMT"
+														},
+														{
+															"key": "Server",
+															"value": "Kestrel"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														}
+													],
+													"cookie": [],
+													"body": "{\n    \"id\": \"73529432-2570-4fd5-8761-2a9d48f635d1\",\n    \"title\": \"First Meeting\",\n    \"startTime\": \"2025-06-03T00:37:49.784+00:00\",\n    \"endTime\": \"2025-06-03T00:37:49.784+00:00\",\n    \"participantIds\": [\n        \"357bb050-8f31-41fb-a346-8ff680fab083\"\n    ]\n}"
+												}
+											]
+										},
+										{
+											"name": "/v1/EnterpriseScheduler/Meetings/:id",
+											"request": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/v1/EnterpriseScheduler/Meetings/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"EnterpriseScheduler",
+														"Meetings",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "811a1197-4906-4789-bf83-d7b5481fe113",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "204 No content",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/v1/EnterpriseScheduler/Meetings/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"v1",
+																"EnterpriseScheduler",
+																"Meetings",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id",
+																	"value": "73529432-2570-4fd5-8761-2a9d48f635d1",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"status": "No Content",
+													"code": 204,
+													"_postman_previewlanguage": "plain",
+													"header": [
+														{
+															"key": "Date",
+															"value": "Tue, 03 Jun 2025 04:03:54 GMT"
+														},
+														{
+															"key": "Server",
+															"value": "Kestrel"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "404 Not found",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/v1/EnterpriseScheduler/Meetings/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"v1",
+																"EnterpriseScheduler",
+																"Meetings",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id",
+																	"value": "74cfd7de-c14b-4e4f-9621-4ff5b2bd6756",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "plain",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain; charset=utf-8"
+														},
+														{
+															"key": "Date",
+															"value": "Tue, 03 Jun 2025 04:31:28 GMT"
+														},
+														{
+															"key": "Server",
+															"value": "Kestrel"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														}
+													],
+													"cookie": [],
+													"body": "Meeting with ID 74cfd7de-c14b-4e4f-9621-4ff5b2bd6756 not found"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "/v1/EnterpriseScheduler/Meetings",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/v1/EnterpriseScheduler/Meetings?page=1&pageSize=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"EnterpriseScheduler",
+												"Meetings"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "pageSize",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "200 Ok",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/v1/EnterpriseScheduler/Meetings?page=1&pageSize=10",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"EnterpriseScheduler",
+														"Meetings"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "1"
+														},
+														{
+															"key": "pageSize",
+															"value": "10"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 03 Jun 2025 03:36:08 GMT"
+												},
+												{
+													"key": "Server",
+													"value": "Kestrel"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"items\": [\n        {\n            \"id\": \"73529432-2570-4fd5-8761-2a9d48f635d1\",\n            \"title\": \"First Meeting\",\n            \"startTime\": \"2025-06-03T00:37:49.784+00:00\",\n            \"endTime\": \"2025-06-03T00:37:49.784+00:00\",\n            \"participantIds\": [\n                \"357bb050-8f31-41fb-a346-8ff680fab083\"\n            ]\n        }\n    ],\n    \"totalCount\": 1,\n    \"pageNumber\": 1,\n    \"pageSize\": 10,\n    \"totalPages\": 1\n}"
+										}
+									]
+								},
+								{
+									"name": "/v1/EnterpriseScheduler/Meetings",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\": \"Third Meeting\",\n    \"startTime\": \"2025-06-03T02:00:00.000-06:00\",\n    \"endTime\": \"2025-06-03T01:00:00.000-06:00\",\n    \"participantIds\": [\n        \"deae984c-0c50-4c72-b6e2-759add218a1e\"\n    ]\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v1/EnterpriseScheduler/Meetings",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"EnterpriseScheduler",
+												"Meetings"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "201 Created at",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"title\": \"First Meeting\",\n    \"startTime\": \"2025-06-03T00:37:49.784+00:00\",\n    \"endTime\": \"2025-06-03T00:37:49.784+00:00\",\n    \"participantIds\": [\n        \"59c1d3ee-7044-4c29-9799-fb3dea239c60\"\n    ]\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/v1/EnterpriseScheduler/Meetings",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"EnterpriseScheduler",
+														"Meetings"
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 03 Jun 2025 04:06:55 GMT"
+												},
+												{
+													"key": "Server",
+													"value": "Kestrel"
+												},
+												{
+													"key": "Location",
+													"value": "http://localhost:5085/v1/EnterpriseScheduler/Meetings/6c204fb1-a842-4cea-9b22-d82a5f4ae21e"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"id\": \"6c204fb1-a842-4cea-9b22-d82a5f4ae21e\",\n    \"title\": \"First Meeting\",\n    \"startTime\": \"2025-06-03T00:37:49.784+00:00\",\n    \"endTime\": \"2025-06-03T00:37:49.784+00:00\",\n    \"participantIds\": [\n        \"59c1d3ee-7044-4c29-9799-fb3dea239c60\"\n    ]\n}"
+										},
+										{
+											"name": "400 Wrong times",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"title\": \"Third Meeting\",\n    \"startTime\": \"2025-06-03T02:00:00.000-06:00\",\n    \"endTime\": \"2025-06-03T01:00:00.000-06:00\",\n    \"participantIds\": [\n        \"deae984c-0c50-4c72-b6e2-759add218a1e\"\n    ]\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/v1/EnterpriseScheduler/Meetings",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"EnterpriseScheduler",
+														"Meetings"
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "plain",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain; charset=utf-8"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 03 Jun 2025 06:30:34 GMT"
+												},
+												{
+													"key": "Server",
+													"value": "Kestrel"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												}
+											],
+											"cookie": [],
+											"body": "Start time must be before end time."
+										},
+										{
+											"name": "400 No participants",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"title\": \"Third Meeting\",\n    \"startTime\": \"2025-06-03T00:37:49.784+00:00\",\n    \"endTime\": \"2025-06-03T00:37:49.784+00:00\",\n    \"participantIds\": []\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/v1/EnterpriseScheduler/Meetings",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"EnterpriseScheduler",
+														"Meetings"
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "plain",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain; charset=utf-8"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 03 Jun 2025 04:50:30 GMT"
+												},
+												{
+													"key": "Server",
+													"value": "Kestrel"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												}
+											],
+											"cookie": [],
+											"body": "At least one participant is required for a meeting."
+										},
+										{
+											"name": "400 Invalid participants",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"title\": \"Third Meeting\",\n    \"startTime\": \"2025-06-03T00:37:49.784+00:00\",\n    \"endTime\": \"2025-06-03T00:37:49.784+00:00\",\n    \"participantIds\": [\n        \"33a513a1-e08a-4294-b420-39fb39727894\"\n    ]\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/v1/EnterpriseScheduler/Meetings",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"EnterpriseScheduler",
+														"Meetings"
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "plain",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain; charset=utf-8"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 03 Jun 2025 04:51:41 GMT"
+												},
+												{
+													"key": "Server",
+													"value": "Kestrel"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												}
+											],
+											"cookie": [],
+											"body": "At least one valid participant ID is required."
+										},
+										{
+											"name": "409 Conflict",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"title\": \"Meeting OL\",\n    \"startTime\": \"2025-06-04T11:00:00+00:00\",\n    \"endTime\": \"2025-06-04T11:00:01+00:00\",\n    \"participantIds\": [\n        \"973cf62b-ce9b-4fd0-a7d3-dc87dd670d31\",\n        \"5208c745-c2f6-41e8-8bca-1deef0881310\",\n        \"6d8fe2aa-c10b-42a7-a18b-5388d5318316\"\n    ]\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/v1/EnterpriseScheduler/Meetings",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"EnterpriseScheduler",
+														"Meetings"
+													]
+												}
+											},
+											"status": "Conflict",
+											"code": 409,
+											"_postman_previewlanguage": "plain",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain; charset=utf-8"
+												},
+												{
+													"key": "Date",
+													"value": "Wed, 04 Jun 2025 05:54:28 GMT"
+												},
+												{
+													"key": "Server",
+													"value": "Kestrel"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												}
+											],
+											"cookie": [],
+											"body": "Conflicts with existing meetings. Here are the next available slots in the next 7 days (in UTC):\n- 2025-06-04T13:00:00+00:00 to 2025-06-04T13:00:01+00:00\n- 2025-06-04T13:00:01+00:00 to 2025-06-04T13:00:02+00:00\n- 2025-06-04T13:00:02+00:00 to 2025-06-04T13:00:03+00:00"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Users",
+							"item": [
+								{
+									"name": "{id}",
+									"item": [
+										{
+											"name": "/v1/EnterpriseScheduler/Users/:id",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/v1/EnterpriseScheduler/Users/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"EnterpriseScheduler",
+														"Users",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "357bb050-8f31-41fb-a346-8ff680fab083",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "200 Ok",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/v1/EnterpriseScheduler/Users/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"v1",
+																"EnterpriseScheduler",
+																"Users",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id",
+																	"value": "deae984c-0c50-4c72-b6e2-759add218a1r",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json; charset=utf-8"
+														},
+														{
+															"key": "Date",
+															"value": "Tue, 03 Jun 2025 06:11:17 GMT"
+														},
+														{
+															"key": "Server",
+															"value": "Kestrel"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														}
+													],
+													"cookie": [],
+													"body": "{\n    \"id\": \"deae984c-0c50-4c72-b6e2-759add218a1e\",\n    \"name\": \"Andre 2\",\n    \"timeZone\": \"America/Mexico_City\"\n}"
+												},
+												{
+													"name": "404 Not found",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/v1/EnterpriseScheduler/Users/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"v1",
+																"EnterpriseScheduler",
+																"Users",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id",
+																	"value": "357bb050-8f31-41fb-a346-8ff680fab083",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "plain",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain; charset=utf-8"
+														},
+														{
+															"key": "Date",
+															"value": "Tue, 03 Jun 2025 06:12:05 GMT"
+														},
+														{
+															"key": "Server",
+															"value": "Kestrel"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														}
+													],
+													"cookie": [],
+													"body": "User with ID 357bb050-8f31-41fb-a346-8ff680fab083 not found"
+												}
+											]
+										},
+										{
+											"name": "/v1/EnterpriseScheduler/Users/:id",
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"<string>\",\n  \"timeZone\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/v1/EnterpriseScheduler/Users/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"EnterpriseScheduler",
+														"Users",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "<uuid>",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "/v1/EnterpriseScheduler/Users/:id",
+											"request": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/v1/EnterpriseScheduler/Users/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"EnterpriseScheduler",
+														"Users",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "33a513a1-e08a-4294-b420-39fb39727894",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "204 No Content",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/v1/EnterpriseScheduler/Users/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"v1",
+																"EnterpriseScheduler",
+																"Users",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id",
+																	"value": "931a4e26-2f08-4bd8-94ed-0f1093568fba",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"status": "No Content",
+													"code": 204,
+													"_postman_previewlanguage": "plain",
+													"header": [
+														{
+															"key": "Date",
+															"value": "Tue, 03 Jun 2025 03:30:43 GMT"
+														},
+														{
+															"key": "Server",
+															"value": "Kestrel"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "404 Not found",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/v1/EnterpriseScheduler/Users/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"v1",
+																"EnterpriseScheduler",
+																"Users",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id",
+																	"value": "33a513a1-e08a-4294-b420-39fb39727894",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "plain",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain; charset=utf-8"
+														},
+														{
+															"key": "Date",
+															"value": "Tue, 03 Jun 2025 06:10:38 GMT"
+														},
+														{
+															"key": "Server",
+															"value": "Kestrel"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														}
+													],
+													"cookie": [],
+													"body": "User with ID 33a513a1-e08a-4294-b420-39fb39727894 not found"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "/v1/EnterpriseScheduler/Users",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/v1/EnterpriseScheduler/Users?page=1&pageSize=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"EnterpriseScheduler",
+												"Users"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "pageSize",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "200 Ok",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/v1/EnterpriseScheduler/Users?page=1&pageSize=10",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"EnterpriseScheduler",
+														"Users"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "1"
+														},
+														{
+															"key": "pageSize",
+															"value": "10"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 03 Jun 2025 03:31:58 GMT"
+												},
+												{
+													"key": "Server",
+													"value": "Kestrel"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"items\": [\n        {\n            \"id\": \"357bb050-8f31-41fb-a346-8ff680fab083\",\n            \"name\": \"Andre 2\",\n            \"timeZone\": \"America/Mexico_City\"\n        }\n    ],\n    \"totalCount\": 1,\n    \"pageNumber\": 1,\n    \"pageSize\": 10,\n    \"totalPages\": 1\n}"
+										}
+									]
+								},
+								{
+									"name": "/v1/EnterpriseScheduler/Users",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"Andre 1\",\n  \"timeZone\": \"America/Mexico_City\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v1/EnterpriseScheduler/Users",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"EnterpriseScheduler",
+												"Users"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "201 Created",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"Andre 2\",\n  \"timeZone\": \"America/Mexico_City\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/v1/EnterpriseScheduler/Users",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"EnterpriseScheduler",
+														"Users"
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 03 Jun 2025 03:28:45 GMT"
+												},
+												{
+													"key": "Server",
+													"value": "Kestrel"
+												},
+												{
+													"key": "Location",
+													"value": "http://localhost:5085/v1/EnterpriseScheduler/Users/357bb050-8f31-41fb-a346-8ff680fab083"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"id\": \"357bb050-8f31-41fb-a346-8ff680fab083\",\n    \"name\": \"Andre 2\",\n    \"timeZone\": \"America/Mexico_City\"\n}"
+										},
+										{
+											"name": "400 Invalid time zone",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"Andre 2\",\n  \"timeZone\": \"MX\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/v1/EnterpriseScheduler/Users",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"EnterpriseScheduler",
+														"Users"
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/problem+json; charset=utf-8"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 03 Jun 2025 03:23:21 GMT"
+												},
+												{
+													"key": "Server",
+													"value": "Kestrel"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc9110#section-15.5.1\",\n    \"title\": \"One or more validation errors occurred.\",\n    \"status\": 400,\n    \"errors\": {\n        \"TimeZone\": [\n            \"'MX' is not a valid timezone identifier. Please use a valid IANA timezone (e.g., 'America/New_York', 'Europe/London', 'Asia/Tokyo').\"\n        ]\n    },\n    \"traceId\": \"00-63a16cadfda01cbdd2353dcecc844dac-c4b66cf583bf66d6-00\"\n}"
+										},
+										{
+											"name": "400 Missing field",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"Andre 2\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/v1/EnterpriseScheduler/Users",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"EnterpriseScheduler",
+														"Users"
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/problem+json; charset=utf-8"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 03 Jun 2025 03:25:24 GMT"
+												},
+												{
+													"key": "Server",
+													"value": "Kestrel"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc9110#section-15.5.1\",\n    \"title\": \"One or more validation errors occurred.\",\n    \"status\": 400,\n    \"errors\": {\n        \"$\": [\n            \"JSON deserialization for type 'EnterpriseScheduler.Models.DTOs.Users.UserRequest' was missing required properties including: 'timeZone'.\"\n        ],\n        \"userRequest\": [\n            \"The userRequest field is required.\"\n        ]\n    },\n    \"traceId\": \"00-3a68eb3c2bec9a7cb52b1eec70235154-22fd1d857707a57d-00\"\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/"
+		}
+	]
+}
