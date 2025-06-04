@@ -47,7 +47,7 @@ The project includes a structured pull request template that:
 
 1. Clone the repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/REPO_NAME.git
+git clone https://github.com/FancyMexican/EnterpriseScheduler.git
 ```
 
 2. Navigate to the project directory
